@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-2 text-right">
+      <label for="search" class="form-label pt-2">Búsqueda</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control" id="search" placeholder="Haz tu búsqueda"/>
+    </div>
+    <div class="col-2">
+      <button class="btn btn-primary w-10">Buscar</button>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-3 mt-2" *ngFor="let item of personajes">
+      <div class="card" style="width: 18rem;">
+        <img src="{{item.image}}" class="card-img-top" [alt]="">
+        <div class="card-body">
+          <h5 class="card-title">Nombre: {{item.name}}</h5>
+          <p class="card-text">Genero: {{item.gender}} </p>
+          <button class="btn btn-primary">Detalles</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
